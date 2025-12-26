@@ -22,7 +22,7 @@ import DocsCards from '/src/components/global/DocsCards';
 
 Pro 8 es un sistema completo de facturación electrónica diseñado específicamente para cumplir con los requerimientos fiscales de SUNAT en Perú. Nuestra plataforma permite emitir comprobantes electrónicos de manera eficiente, gestionar inventarios, controlar ventas y administrar tu negocio desde cualquier dispositivo.
 
-Comienza ahora siguiendo nuestra [Guía de Configuracion esencial para tu cuenta](../docs/guias-adicionales/01-Configuracion-esencial-para-tu-cuenta-de-facturacion.md) o explorando las funcionalidades principales del sistema.
+Comienza ahora siguiendo nuestra [Guía de Configuracion esencial para tu cuenta](../docs/guias-adicionales/Configuracion/01-Configuracion-esencial-para-tu-cuenta-de-facturacion.md) o explorando las funcionalidades principales del sistema.
 
 <DocsCards>
   <DocsCard 
