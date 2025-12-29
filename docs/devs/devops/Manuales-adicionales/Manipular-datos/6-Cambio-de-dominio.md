@@ -13,6 +13,7 @@ Esta guía explica cómo cambiar el dominio en una instalación activa del siste
 ## 📋 Pre Requisitos
 
 Antes de comenzar, asegúrate de tener:
+
 - Acceso SSH al servidor
 - Permisos de superusuario (root)
 - El nuevo dominio configurado y apuntando al servidor
@@ -67,11 +68,13 @@ APP_URL_BASE=nuevoDominio.com
 ```
 
 **Ejemplo:**
+
 ```env
 APP_URL_BASE=example.com
 ```
 
 Guardar los cambios:
+
 - Presione `Ctrl + X`
 - Presione `Y` para confirmar
 - Presione `Enter`
@@ -93,6 +96,7 @@ VIRTUAL_HOST: nuevoDominio.com, *.nuevoDominio.com
 ```
 
 **Ejemplo:**
+
 ```yaml
 VIRTUAL_HOST: example.com, *.example.com
 ```
@@ -142,6 +146,7 @@ docker exec -it [nombre_contenedor_fpm] bash
 ```
 
 **Ejemplo:**
+
 ```bash
 docker exec -it facturador_fpm_1 bash
 ```
@@ -172,12 +177,11 @@ Si existen clientes registrados en el sistema, debe actualizar la tabla de hostn
 2. Localice la tabla `hostnames`
 3. Edite el campo `fqdn` actualizando los dominios registrados
 
-
 ### 8. Configurar SSL (Si aplica)
 
 Si su instalación utiliza certificados SSL, debe actualizar los certificados para el nuevo dominio:
 
-👉 **[Manual de Instalación/Actualización SSL](../../../instalacion/04-Instalar-SSL.md)**
+👉 **[Manual de Instalación/Actualización SSL](../../../despliegue/seguridad/instalar-ssl.md)**
 
 ---
 
@@ -186,6 +190,7 @@ Si su instalación utiliza certificados SSL, debe actualizar los certificados pa
 #### 9.1 Limpiar caché del navegador
 
 En su navegador:
+
 - **Chrome/Edge:** `Ctrl + Shift + Delete`
 - **Firefox:** `Ctrl + Shift + Delete`
 - Seleccione "Todo el tiempo" y limpie caché e imágenes
@@ -204,11 +209,13 @@ En su navegador:
 ### El sitio no carga después del cambio
 
 **Posibles causas:**
+
 - El dominio no está apuntando correctamente al servidor
 - Los servicios Docker no se reiniciaron correctamente
 - Problemas con el certificado SSL
 
 **Solución:**
+
 ```bash
 # Verificar estado de contenedores
 docker ps
@@ -225,6 +232,7 @@ docker-compose restart
 ### Error 502 Bad Gateway
 
 **Solución:**
+
 ```bash
 # Reiniciar el proxy
 docker restart proxy_proxy_1
@@ -257,5 +265,4 @@ Antes de dar por finalizado el cambio, verifique:
 - [ ] No hay errores en los logs de Docker
 - [ ] Los clientes pueden acceder a sus subdominios (si aplica)
 
-
-*Sistema de Facturación Pro 8*
+_Sistema de Facturación Pro 8_

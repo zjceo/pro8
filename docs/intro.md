@@ -26,31 +26,40 @@ Comienza ahora siguiendo nuestra [Guía de Configuracion esencial para tu cuenta
 
 <DocsCards>
   <DocsCard 
-    header="Guía de Instalación"
-    href="instalaciones"
+    header="Guía de Despliegue"
+    href="despliegue"
   >
     <p>Guías paso a paso para configurar e instalar el Sistema de Facturación Pro 8.</p>
   </DocsCard>
 
-  <DocsCard
-    header="Aplicación para Facturación"
-    href="app-para-facturacion"
-  >
+<DocsCard
+header="Aplicación para Facturación"
+href="app-para-facturacion"
+
+>
+
     <p>Manual del aplicativo móvil del sistema de facturación.</p>
+
   </DocsCard>
 
-  <DocsCard
-    header="Manuales Adicionales"
-    href="manuales-adicionales"
-  >
+<DocsCard
+header="Manuales Adicionales"
+href="manuales-adicionales"
+
+>
+
     <p>Guía de configuraciones del sistema, para los procesos de configuración primarios.</p>
+
   </DocsCard>
 
-  <DocsCard 
-    header="Mozo APP" 
-    href="mozo" 
-  >
+<DocsCard
+header="Mozo APP"
+href="mozo"
+
+>
+
     <p>Encuentra ayuda sobre nuestra aplicación Mozo, una extensión del sistema Pro 8 diseñada para restaurantes.</p>
+
   </DocsCard>
 </DocsCards>
 
@@ -103,8 +112,3 @@ Pro 8 es compatible con **VendeYa.pe** y **Mozo.pe**, ampliando sus capacidades 
 ## Comunidad
 
 Pro 8 es desarrollado y mantenido activamente por un equipo central, y su ecosistema está guiado por una comunidad de desarrolladores y contribuyentes que impulsan su crecimiento y adopción. Empresas de todos los tamaños utilizan Pro 8 para gestionar sus operaciones de facturación electrónica en Perú.
-
-
-## Licencia
-
-El Sistema de Facturación Pro 8 es un proyecto propietario de Facturalo Perú. Todo el contenido, código fuente y materiales relacionados están protegidos por derechos de autor.

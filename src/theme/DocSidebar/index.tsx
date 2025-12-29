@@ -73,7 +73,7 @@ function getIconForItem(item) {
     if (item.label.includes('Multi Empresa')) return <Users  size={18} />; 
     if (item.label.includes('Dashboard')) return <LayoutDashboard  size={18} />;
     if (item.label.includes('Introducción')) return <Sparkles  size={18} />;
-    if (item.label.includes('Instalaciones')) return <MonitorDown  size={18} />;
+    if (item.label.includes('Despliegue')) return <MonitorDown  size={18} />;
     if (item.label.includes('Panel de administración')) return <LayoutGrid  size={18} />;
     if (item.label.includes('VendeYa')) return <ShoppingCart  size={18} />;
     if (item.label.includes('Iniciar Sesión')) return <KeyRound  size={18} />;

@@ -9,7 +9,7 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 const config: Config = {
   title: "PRO 8",
   tagline: "Facturador Electrónico Pro 8",
-  favicon: "img/favicon.ico",
+  favicon: "img/pro8-favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -42,7 +42,7 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          //sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           showLastUpdateTime: true,
@@ -209,7 +209,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/pro8-social-card.jpg",
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -246,7 +246,7 @@ const config: Config = {
       title: "Pro 8",
       logo: {
         alt: "Facturador Pro 8",
-        src: "img/logo.svg",
+        src: "img/pro8-logo.svg",
       },
       items: [
         /*{

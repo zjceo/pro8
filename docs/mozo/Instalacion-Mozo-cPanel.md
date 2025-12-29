@@ -39,9 +39,11 @@ Para el **Método Recomendado** va a necesitar descargar **FileZilla Client** de
 ### 🌍 Paso 1: Creación del Dominio
 
 1. **Acceso a cPanel**
+
    - Ingresar con credenciales de administrador
 
 2. **Navegación**
+
    - Ir a: **Dominios** → **Crear un Nuevo Dominio**
 
 3. **Configuración del dominio**
@@ -49,7 +51,7 @@ Para el **Método Recomendado** va a necesitar descargar **FileZilla Client** de
    - ⚠️ **CRÍTICO:** Desmarcar la casilla de configuración automática
    - 📁 Agregar `/public_html/` al final del campo "nombre de carpeta"
 
-![Interfaz de creación de dominio](../Devs/instalacion/img/mozo_crear_nuevo_dominio.png)
+![Interfaz de creación de dominio](../devs/despliegue/plataformas/img/mozo_crear_nuevo_dominio.png)
 
 ::::warning NOTA CRÍTICA
 Es fundamental desmarcar la casilla y agregar `/public_html/` para que la instalación funcione correctamente.
@@ -60,18 +62,22 @@ Es fundamental desmarcar la casilla y agregar `/public_html/` para que la instal
 ### 📥 Paso 2: Descarga de Mozo Compilado
 
 #### 2.1 Acceso al Repositorio
+
 1. **Ingreso al portal**
+
    - 🔗 Navegar a: **https://git.buho.la/**
 
 2. **Localización del proyecto**
+
    - 🔍 Buscar: `Mozo/Compilado`
 
 3. **Descarga del código**
+
    - 🔵 Hacer clic en el botón **"Code"**
    - 📦 Seleccionar **"Download source code"**
    - 🗜️ Elegir formato **.zip**
 
-   ![Descarga del código compilado](../Devs/instalacion/img/mozo_descargar_codigo_compilado.png)
+   ![Descarga del código compilado](../devs/despliegue/plataformas/img/mozo_descargar_codigo_compilado.png)
 
 4. **Almacenamiento local**
    - 💾 Guardar en carpeta de fácil acceso
@@ -96,10 +102,12 @@ Elige el método que prefieras para subir los archivos. Te recomendamos el **Mé
     </ul>
   </DocsCard>
 
-  <DocsCard
-    header="🛠️ Método FileZilla (Recomendado)"
-    href="#método-2-filezilla-recomendado"
-  >
+<DocsCard
+header="🛠️ Método FileZilla (Recomendado)"
+href="#método-2-filezilla-recomendado"
+
+>
+
     <p><strong>Método profesional</strong></p>
     <p>Subida avanzada con cliente FTP. Recomendado para instalaciones profesionales y personalización.</p>
     <ul>
@@ -108,6 +116,7 @@ Elige el método que prefieras para subir los archivos. Te recomendamos el **Mé
       <li>✅ Manejo de archivos grandes</li>
       <li>✅ Control total del proceso</li>
     </ul>
+
   </DocsCard>
 </DocsCards>
 
@@ -124,30 +133,30 @@ En caso de errores con este método, utilice el **Método 2 - FileZilla** que se
 1. **Acceso a dominios**
    - 🏠 En cPanel → **Dominios**
 
-![Panel de dominios](../Devs/instalacion/img/mozo_panel_dominios.png)
+![Panel de dominios](../devs/despliegue/plataformas/img/mozo_panel_dominios.png)
 
 2. **Acceso al dominio**
    - 📂 Ingresar a la ruta del dominio creado
 
-![Acceso al dominio](../Devs/instalacion/img/mozo_acceso_dominio.png)
+![Acceso al dominio](../devs/despliegue/plataformas/img/mozo_acceso_dominio.png)
 
 3. **Función de carga**
    - ⬆️ Seleccionar **"Cargar"** o **"Upload"**
 
-![Función de carga](../Devs/instalacion/img/mozo_funcion_carga.png)
+![Función de carga](../devs/despliegue/plataformas/img/mozo_funcion_carga.png)
 
 ### 3.2 Carga del Archivo ZIP
 
 1. **Selección del archivo**
    - 📁 Elegir el archivo `.zip` descargado
 
-![Selección de archivo](../Devs/instalacion/img/mozo_seleccion_archivo.png)
+![Selección de archivo](../devs/despliegue/plataformas/img/mozo_seleccion_archivo.png)
 
 2. **Proceso de carga**
    - ⏳ Esperar que la barra indique "Completado"
    - 🔄 Regresar a la carpeta raíz del dominio
 
-![Proceso completado](../Devs/instalacion/img/mozo_proceso_completado.png)
+![Proceso completado](../devs/despliegue/plataformas/img/mozo_proceso_completado.png)
 
 **👉 Si usaste este método, continúa con el [Paso 4: Extracción y Organización](#paso-4-extracción-y-organización)**
 
@@ -167,7 +176,7 @@ En caso de errores con este método, utilice el **Método 2 - FileZilla** que se
 Antes de comenzar, necesitará obtener de su cPanel:
 
 1. **📡 Shared IP Address** (Dirección IP compartida)
-2. **👤 Usuario actual** de cPanel  
+2. **👤 Usuario actual** de cPanel
 3. **🔐 Contraseña** de cPanel
 
 ### 3.1 Conexión y Configuración
@@ -175,18 +184,20 @@ Antes de comenzar, necesitará obtener de su cPanel:
 1. **Interfaz de FileZilla**
 
 FileZilla funciona con una interfaz dividida:
+
 - **📁 Sección izquierda:** Sus archivos locales (PC/laptop)
 - **🌐 Sección derecha:** Carpetas de su cPanel
 
-![Interfaz de FileZilla](../Devs/instalacion/img/mozo_filezilla_interfaz.png)
+![Interfaz de FileZilla](../devs/despliegue/plataformas/img/mozo_filezilla_interfaz.png)
 
 2. **Localización de la carpeta del dominio**
 
 En su cPanel necesitará buscar la carpeta del dominio que creó:
+
 - **📍 Recordar:** La creamos con el prefijo `/public_html/`
 - **🎯 Ubicación:** Esto es crucial para localizar correctamente nuestra carpeta de trabajo
 
-![Localización de carpeta](../Devs/instalacion/img/mozo_filezilla_localizacion_carpeta.png)
+![Localización de carpeta](../devs/despliegue/plataformas/img/mozo_filezilla_localizacion_carpeta.png)
 
 ### 3.2 Acceso y Subida
 
@@ -196,7 +207,7 @@ En su cPanel necesitará buscar la carpeta del dominio que creó:
 - **👁️ Visualizar** los dominios disponibles
 - **✅ Seleccionar** el dominio donde instalaremos Mozo Compilado
 
-![Acceso a carpeta de dominio](../Devs/instalacion/img/mozo_filezilla_acceso_carpeta_dominio.png)
+![Acceso a carpeta de dominio](../devs/despliegue/plataformas/img/mozo_filezilla_acceso_carpeta_dominio.png)
 
 2. **Subida de archivos**
 
@@ -209,7 +220,7 @@ En la sección izquierda debe tener su compilado **ya extraído** (en carpeta, n
 - **⬆️ Seleccionar** la opción **"Subir"**
 - **✅ Confirmar** la transferencia
 
-![Subida de archivos](../Devs/instalacion/img/mozo_filezilla_subida_archivos.png)
+![Subida de archivos](../devs/despliegue/plataformas/img/mozo_filezilla_subida_archivos.png)
 
 ::::success PROCESO COMPLETADO
 Con esto habrá terminado la subida de archivos a cPanel usando el método recomendado de FileZilla.
@@ -228,13 +239,14 @@ Si utilizó FileZilla (Método 2), puede omitir este paso ya que los archivos se
 #### 4.1 Extracción del ZIP
 
 1. **Localización del archivo**
+
    - 🔍 Buscar el archivo ZIP en la carpeta raíz
 
 2. **Proceso de extracción**
    - 🖱️ Clic derecho sobre el archivo
    - 📦 Seleccionar **"Extract"** (Extraer)
 
-![Proceso de extracción](../Devs/instalacion/img/mozo_proceso_extraccion.png)
+![Proceso de extracción](../devs/despliegue/plataformas/img/mozo_proceso_extraccion.png)
 
 ::::info LIMPIEZA
 Ya puedes eliminar el archivo ZIP tras la extracción.
@@ -245,21 +257,22 @@ Ya puedes eliminar el archivo ZIP tras la extracción.
 1. **Acceso a la carpeta compilado**
    - 📁 Ingresar a la carpeta `compilado` creada
 
-![Carpeta compilado](../Devs/instalacion/img/mozo_carpeta_compilado.png)
+![Carpeta compilado](../devs/despliegue/plataformas/img/mozo_carpeta_compilado.png)
 
 2. **Selección de archivos**
+
    - ☑️ Usar "Seleccionar todo"
    - ✅ Verificar que todos los archivos estén marcados
 
 3. **Movimiento a raíz**
    - 🔄 Hacer clic en **"Mover"**
 
-![Mover archivos](../Devs/instalacion/img/mozo_mover_archivos.png)
+![Mover archivos](../devs/despliegue/plataformas/img/mozo_mover_archivos.png)
 
-   - 🎯 En el modal: seleccionar carpeta raíz del dominio
-   - 🧹 Eliminar prefijo `compilado-main` para dejar solo el nombre del dominio
+- 🎯 En el modal: seleccionar carpeta raíz del dominio
+- 🧹 Eliminar prefijo `compilado-main` para dejar solo el nombre del dominio
 
-![Selección de destino](../Devs/instalacion/img/mozo_seleccion_destino.png)
+![Selección de destino](../devs/despliegue/plataformas/img/mozo_seleccion_destino.png)
 
 ::::tip LIMPIEZA
 Elimina la carpeta `compilado` vacía para mantener el orden.
@@ -274,7 +287,7 @@ Elimina la carpeta `compilado` vacía para mantener el orden.
 1. **Creación del archivo**
    - 📄 Crear archivo `.htaccess` en la carpeta raíz
 
-![Crear htaccess](../Devs/instalacion/img/mozo_crear_htaccess.png)
+![Crear htaccess](../devs/despliegue/plataformas/img/mozo_crear_htaccess.png)
 
 **Si el archivo no aparece:**
 
@@ -282,24 +295,24 @@ Elimina la carpeta `compilado` vacía para mantener el orden.
 **Solución:** Ir al botón **"Configuración"** (esquina superior derecha) y activar **"Mostrar archivos ocultos"**
 ::::
 
-![Configuración de archivos ocultos](../Devs/instalacion/img/mozo_configuracion_archivos_ocultos.png)
+![Configuración de archivos ocultos](../devs/despliegue/plataformas/img/mozo_configuracion_archivos_ocultos.png)
 
-![Mostrar archivos ocultos](../Devs/instalacion/img/mozo_mostrar_archivos_ocultos.png)
+![Mostrar archivos ocultos](../devs/despliegue/plataformas/img/mozo_mostrar_archivos_ocultos.png)
 
 2. **Contenido del archivo**
    - ✏️ Editar el archivo y agregar:
 
-![Editar htaccess](../Devs/instalacion/img/mozo_editar_htaccess.png)
+![Editar htaccess](../devs/despliegue/plataformas/img/mozo_editar_htaccess.png)
 
 ```apache
 # Archivo necesario para funcionamiento SPA en Apache
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
+
     # Condición: si el archivo o directorio solicitado no existe
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    
+
     # Redirigir todas las peticiones al index.html
     RewriteRule ^ index.html [L]
 </IfModule>
@@ -313,12 +326,12 @@ Elimina la carpeta `compilado` vacía para mantener el orden.
 1. **Localización del archivo**
    - 🔍 Buscar y abrir `config.json` en la raíz
 
-![Localizar config.json](../Devs/instalacion/img/mozo_localizar_config_json.png)
+![Localizar config.json](../devs/despliegue/plataformas/img/mozo_localizar_config_json.png)
 
 2. **Verificación de rutas**
    - ✅ Verificar que la ruta principal esté configurada según su dominio
 
-![Configurar config.json](../Devs/instalacion/img/mozo_configurar_config_json.png)
+![Configurar config.json](../devs/despliegue/plataformas/img/mozo_configurar_config_json.png)
 
 ::::danger CRÍTICO - apiUrl
 El `apiUrl` debe apuntar al sistema del cliente final. El cliente debe existir primero antes de configurar Mozo.
@@ -337,13 +350,17 @@ El `apiUrl` debe apuntar al sistema del cliente final. El cliente debe existir p
 ## ✅ Verificación de la Instalación
 
 ### 🧪 Pasos de Verificación
+
 1. **Acceso inicial**
+
    - 🌐 Ingresar al dominio desde navegador web
 
 2. **Verificación de carga**
+
    - ✅ Confirmar que Mozo se carga correctamente
 
 3. **Prueba de navegación**
+
    - 🔗 Probar navegación entre secciones
 
 4. **Verificación de errores**
@@ -358,6 +375,7 @@ Una vez completada la instalación exitosamente:
 ```
 
 **📋 Ejemplos:**
+
 - `mirestaurante.com` → `https://mirestaurante.com/auth/login`
 - `pedidos.miempresa.com` → `https://pedidos.miempresa.com/auth/login`
 
@@ -365,23 +383,24 @@ Una vez completada la instalación exitosamente:
 
 ## 🔧 Solución de Problemas
 
-| 🚨 Problema | 🔍 Posible Causa | 💡 Solución |
-|-------------|------------------|-------------|
-| Error 404 en navegación | `.htaccess` mal configurado | Verificar configuración del archivo `.htaccess` |
-| Aplicación no carga | Ruta incorreta en `config.json` | Revisar y corregir rutas en configuración |
-| Archivos no encontrados | Archivos mal ubicados | Verificar que archivos estén en carpeta raíz |
-| Error de subida en cPanel | Archivo muy grande o timeout | Usar Método 2 - FileZilla |
+| 🚨 Problema               | 🔍 Posible Causa                | 💡 Solución                                     |
+| ------------------------- | ------------------------------- | ----------------------------------------------- |
+| Error 404 en navegación   | `.htaccess` mal configurado     | Verificar configuración del archivo `.htaccess` |
+| Aplicación no carga       | Ruta incorreta en `config.json` | Revisar y corregir rutas en configuración       |
+| Archivos no encontrados   | Archivos mal ubicados           | Verificar que archivos estén en carpeta raíz    |
+| Error de subida en cPanel | Archivo muy grande o timeout    | Usar Método 2 - FileZilla                       |
 
 ---
 
 ## 📝 Notas Finales
 
 ::::info Recomendaciones
+
 - **📋 Respaldo:** Mantener copia de seguridad antes de cambios
-- **🔒 Seguridad:** Usar credenciales seguras para cPanel  
+- **🔒 Seguridad:** Usar credenciales seguras para cPanel
 - **📞 Soporte:** Consultar documentación o equipo de soporte ante problemas
 - **🔄 Actualizaciones:** Mantenerse al día con actualizaciones del sistema
-::::
+  ::::
 
 ---
 
