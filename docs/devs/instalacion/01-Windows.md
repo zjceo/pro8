@@ -1,22 +1,27 @@
 ---
 sidebar_position: 1
 ---
+
 # Windows
 
-Se explicará como poder descargar y poder ejecutar el facturador dentro de su máquina windows.
+Guía paso a paso para instalar y ejecutar el sistema de facturación en Windows.
 
-Antes de instalar, se tiene que tener presente que hay dos proyectos de facturador: **Pro6** y **ProX**, de las cuales cada uno tiene sus propios requisitos previos
+---
 
-## Requisitos previos del Pro6
+## Requisitos Previos
+
+Antes de instalar, tenga en cuenta que existen dos versiones del facturador: **Pro8** y **ProX**, cada una con sus propios requisitos.
+
+### Pro 8
 
 | Tecnología | Versión |
 |------------|---------|
-| PHP        | 7.4     |
+| PHP        | 8.2     |
 | MySQL      | 5.7     |
-| Laravel    | 5.6     |
-| Node       | 12.22   |
+| Laravel    | 9       |
+| Node       | 18      |
 
-## Requisitos previos del ProX
+### ProX
 
 | Tecnología | Versión |
 |------------|---------|
@@ -25,170 +30,237 @@ Antes de instalar, se tiene que tener presente que hay dos proyectos de facturad
 | Laravel    | ^9.0    |
 | Node       | ^14.17  |
 
-## Instalaciones 
+---
 
-Este tópico es para ambos proyectos, asi que funcionará con cualquier tecnologias que descargues respecto a la versión del facturador. 
+## Instalación de Herramientas
 
-### Laragon
+### 1. Laragon
 
-Para poder correr el facturador se necesitará de un entorno de desarrollo, aquí es donde entra Laragon, si quieres descargalo haz click **[aqui](https://laragon.org/download/)** (se recomienda descargar la versión full).
+Laragon es el entorno de desarrollo que utilizaremos para ejecutar el facturador.
 
-### PHP
+**Descargar:** [laragon.org/download](https://laragon.org/download/)  
 
-Puede entrar dentro de este repositorio y encontrará los binarios de php **[Repositorio PHP](https://windows.php.net/downloads/releases/archives/)** (Para este ejemplo se uso la versión **php-7.4.7-Win32-vc15-x64**).
+---
 
-Una vez haga click a su versión, se le instalará un zip, ahora este archivo debe colocarse dentro de Laragon.
+### 2. PHP
 
-1. Instalar la versión de PHP. 
-2. Luego dirigirse a donde se encuentra Laragon ``` C:\laragon``` (Por defecto Laragon te lo descarga en el disco C) y entrar en la carpeta **bin**.
- ![alt text](img/carpeta-bin-laragon.png)
+#### Descarga
 
- Dirigirse a la carpeta **php**
+Acceda al repositorio oficial: [Repositorio PHP](https://windows.php.net/downloads/releases/archives/)
 
-3. El archivo zip de PHP que descargaste, se deberá colocar dentro de la carpeta **php** y descomprimirlo con el boton **"Extraer en 'php-7.4.7-Win32-vc15-x64'"**.
+**Versión recomendada:** [php-8.3.16-Win32-vs16-x64.zip](https://windows.php.net/downloads/releases/archives/php-8.3.16-Win32-vs16-x64.zip)
 
- ![alt text](img/descomprimir-php-laragon.png)
+#### Instalación
 
-4. Ya hecho esto, solo faltaria colocar este versión de PHP por defecto:
+1. Descargue el archivo ZIP de PHP
+2. Navegue hasta la carpeta de Laragon: `C:\laragon\bin\php`
 
-  ![alt text](img/default-version-laragon.png)
+   ![Carpeta bin](img/carpeta-bin-laragon.png)
 
-### MySQL
+3. Copie el archivo ZIP dentro de la carpeta `php` y extraiga usando **"Extraer en..."**
 
-Para colocar la version de MySQL correcta dentro de Laragon se debe descargar su zip, para buscar la versión de MySQL haga click **[aqui](https://downloads.mysql.com/archives/community/)** (Para este ejemplo se uso la versión de **mysql-5.7.20-winx64**).
+   ![Descomprimir PHP](img/descomprimir-php-laragon.png)
 
-1. Instalar la versión de MySQL.
+4. Configure esta versión como predeterminada en Laragon:
 
- ![alt text](img/instalacion-mysql.png)
+   ![Versión por defecto](img/default-version-laragon.png)
 
-2. Luego dirigirse a donde se encuentra Laragon ``` C:\laragon``` (Por defecto Laragon te lo descarga en el disco C) y entrar en la carpeta **bin**.
+---
 
- ![alt text](img/carpeta-bin-laragon.png)
+### 3. MySQL
 
- Ahi se encontrará la carpeta de **mysql**, ingresamos a esa carpeta
+#### Descarga
 
-3. El archivo zip de MySQL que descargaste, se debera colocar dentro de la carpeta mysql y descomprimirlo con el boton **Extraer aquí**.
+Acceda al repositorio oficial: [MySQL Archives](https://downloads.mysql.com/archives/community/)
 
- ![alt text](img/descomprimir-mysql.png)
+**Versión recomendada:** [mysql-8.0.30-winx64.zip](https://downloads.mysql.com/archives/get/p/23/file/mysql-8.0.30-winx64.zip)
 
-4. Ya hecho esto, solo faltaría colocar esta versión de MySQL por defecto.
+#### Instalación
 
- ![alt text](img/default-mysql-laragon.png)
+1. Descargue el archivo ZIP de MySQL
+
+   ![Instalación MySQL](img/instalacion-mysql.png)
+
+2. Navegue hasta: `C:\laragon\bin\mysql`
+
+   ![Carpeta bin](img/carpeta-bin-laragon.png)
+
+3. Copie el archivo ZIP dentro de la carpeta `mysql` y extraiga usando **"Extraer aquí"**
+
+   ![Descomprimir MySQL](img/descomprimir-mysql.png)
+
+4. Configure esta versión como predeterminada en Laragon:
+
+   ![MySQL por defecto](img/default-mysql-laragon.png)
+
+---
 
 ## Configuración de Laragon
 
-### Activar extensión **SOAP**
+### Extensión SOAP
 
- ![alt text](img/extension-soap.png)
-:::danger IMPORTANTE
- Revisar si esta activado esta extensión, algunas funciones podrían fallar, como por ejemplo la creación de facturas.
-:::
+Verifique que la extensión SOAP esté activada en el archivo `php.ini`:
 
-### Puertos de los Servicios
-Algunas veces podrian presentarse un error de puertos ocupados, esto se soluciona si los cambia. Dentro de Laragon hay un icono de una tuerca, haga click y luego dirigirse a **Servicios & Puertos**. Ahi podra personalizar en que puerto desea cambiar.
+![Extensión SOAP](img/extension-soap.png)
 
- ![alt text](img/servicios-puertos.png)
- 
+> **⚠️ IMPORTANTE:** Esta extensión es necesaria para la creación de facturas. Si no está activada, algunas funciones fallarán.
+
+---
+
+### Servicios y Puertos
+
+Si experimenta conflictos de puertos, puede cambiarlos desde:
+
+**Laragon → ⚙️ → Servicios & Puertos**
+
+![Servicios y Puertos](img/servicios-puertos.png)
+
+---
 
 ### Hostname
-En laragon crea un dominio, puede cambiarlo a su gusto, por ejemplo **\{name\}.text**, **\{name\}.pe**, **\{name\}.oo**
 
- ![alt text](img/dominios-laragon.png)
+Configure el dominio local según su preferencia. Por ejemplo: `{name}.test`, `{name}.pe`, `{name}.oo`
 
-## Pasos
+![Dominios](img/dominios-laragon.png)
 
-1. Abre Laragon y haga click en **Terminal**, ahora toda instalación será dentro de la carpeta ```C:\laragon\www```
-![alt text](img/terminal-laragon.png)
+---
 
-2. Ahora se debe clonar el proyecto en tu máquina: 
-   * Entra a tu cuenta que se te brindo y entra al proyecto que elegiste (para este ejemplo se usará el **Pro6**)
+## Instalación del Proyecto
 
-     ![alt text](img/gitlab-clone.png)
-    En el recuadro donde dice **"Clone with HTTPS"**, copia la URL que se encuentra.
+### Paso 1: Abrir Terminal
 
-    * Ahora tienes que colocar este comando dento de la terminal que abriste en Laragon.
-     ```bash
-     git clone [La URL que copiaste]
-     ```
-     Y luego de esto, se le pedirá su usuario y contraseña, una vez verificado se le descargará el proyecto.
+Abra Laragon y haga clic en **Terminal**. Trabajará dentro de la carpeta `C:\laragon\www`
 
-3. Se debe crear la base de datos, para ello debes ingresar a la base de datos que esta integrado en Laragon
-    :::caution Precaución
-     Antes de comenzar, verifique que no tengan ningún otro servicio de MySQL corriendo en su máquina ya que puede ver conflictos entre ellas. Primero apaga cualquier servicio de MySQL y luego ingrese a la base de datos de Laragon
-    :::
+![Terminal](img/terminal-laragon.png)
 
-    ![Alt text](img/base-datos-laragon.png)
+---
 
-    * Seleccione alguna sesión y ingrese con el botón **"Abrir"**:
+### Paso 2: Clonar el Proyecto
 
-     ![Alt text](img/session-datos-laragon.png)
-      Si por alguna razón no tiene alguna sesión, entonces puede crearlo con el botón de **"Nueva"**.
-    
-    * Ahora solo debe crear una base de datos, el nombre depende de usted pero se recomienda que no tenga caracteres especiales. En el recuadro donde esta el nombre de la sesión, hazle click derecho y luego dirigase a la opción de la imagen de abajo:
+1. Acceda a su cuenta de GitLab y seleccione el proyecto (Pro8)
 
-     ![Alt text](img/crear-db-laragon.png)
-    
-     :::tip RECUERDA
-      Tenga en cuenta el nombre de su base de datos, se usará más adelante.
-     :::
+   ![GitLab Clone](img/gitlab-clone.png)
 
+2. Copie la URL que aparece en **"Clone with HTTPS"**
 
-
-4. Una vez descargado el proyecto, tendra que tener el archivo **pro6**.
-  Para verificar si tienes la carpeta pro6, hazlo con el comando ```ls```
-
-   * Ingresa a la carpeta pro6
-
-    ```bash
-    cd pro6
-    ```
-   * Ahora, coloca este comando para crear un archivo .**env**
+3. En la terminal, ejecute:
 
    ```bash
-   cp .env.example .env 
+   git clone [URL_copiada]
    ```
 
-   * Se debe modificar el archivo .env que hemos creado, especificamente dos variables:
+4. Ingrese su usuario y contraseña cuando se le solicite
 
-    ```env
-    APP_URL_BASE={carpeta}.test
-    ```
+---
 
-     * **carpeta**, aca debe colocarse el nombre específico de la carpeta del proyecto.
-     * El **".test"** dependerá de la configuración que colocaste dentro del Hostname de Laragon.
+### Paso 3: Crear Base de Datos
 
-    ```env
-    DB_DATABASE={el nombre de su base de datos}
-    ```
+> **⚠️ Precaución:** Antes de continuar, verifique que no haya otros servicios de MySQL ejecutándose en su máquina. Detenga cualquier servicio MySQL activo antes de proceder.
 
-     * Se debe ingresar el nombre de la base de datos que creaste en el Paso 3.
+1. En Laragon, haga clic en **Base de datos**
 
-5. Instalar las dependencias del proyecto
-  ```bash
-  composer install
-  ```
+   ![Base de datos](img/base-datos-laragon.png)
 
-6. Y luego seguir estos comandos, cada comando debe hacerse uno por uno.
-  ```bash
-  php artisan key:generate
-  composer dump-autoload
-  php artisan migrate --seed
-  php artisan storage:link
-  ```
+2. Seleccione una sesión y presione **"Abrir"**
 
-7. Abre Laragon y presiones el botom **"Iniciar todo"**
- ![Alt text](img/apache-laragon.png)
-  Con esto ya esta encendido el servidor apache.
+   ![Sesión](img/session-datos-laragon.png)
 
+   *Si no tiene una sesión, créela con el botón **"Nueva"***
 
-8. Si todo se ha realizado al pie de la letra, entonces ya puedes ingresar a la pagina. Haga click derecho y se le mostrará opciones, eliga la opción **"www"**. 
+3. Cree una nueva base de datos:
+   - Haga clic derecho en el nombre de la sesión
+   - Seleccione la opción para crear base de datos
 
-![Alt text](img/ingresar-web-laragon.png)
+   ![Crear DB](img/crear-db-laragon.png)
 
+> **💡 Importante:** Recuerde el nombre de su base de datos, lo necesitará más adelante.
 
-Se le mostrará la pagina de login, las credenciales son:
- * Correo electrónico: **admin@gmail.com**
- * Contraseña: **123456**
+---
 
-![Alt text](img/login-pro6.png)
+### Paso 4: Configurar el Proyecto
 
+1. Verifique que esté en la carpeta correcta con el comando `ls`
+
+2. Ingrese a la carpeta del proyecto:
+
+   ```bash
+   cd pro8
+   ```
+
+3. Cree el archivo de configuración:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Edite el archivo `.env` y modifique estas variables:
+
+   ```env
+   APP_URL_BASE=pro8.test
+   ```
+   
+   *Reemplace `pro8` por el nombre de su carpeta y `.test` según su configuración de Hostname*
+
+   ```env
+   DB_DATABASE=nombre_de_su_base_de_datos
+   ```
+   
+   *Ingrese el nombre de la base de datos creada en el Paso 3*
+
+---
+
+### Paso 5: Instalar Dependencias
+
+Ejecute el siguiente comando:
+
+```bash
+composer install
+```
+
+---
+
+### Paso 6: Configurar el Proyecto
+
+Ejecute estos comandos uno por uno:
+
+```bash
+php artisan key:generate
+composer dump-autoload
+php artisan migrate --seed
+php artisan storage:link
+```
+
+---
+
+### Paso 7: Iniciar el Servidor
+
+En Laragon, presione el botón **"Iniciar todo"**
+
+![Apache](img/apache-laragon.png)
+
+Esto iniciará el servidor Apache y MySQL.
+
+---
+
+### Paso 8: Acceder al Sistema
+
+1. En Laragon, haga clic derecho y seleccione la opción **"www"**
+
+   ![Ingresar web](img/ingresar-web-laragon.png)
+
+2. Se abrirá la página de login. Use estas credenciales:
+
+   **Correo electrónico:** `admin@gmail.com`  
+   **Contraseña:** `123456`
+
+   ![Login](img/login-pro8.png)
+
+---
+
+## ✅ Instalación Completada
+
+El sistema ya está listo para usar. Si experimenta algún problema, revise cada paso cuidadosamente o contacte al soporte técnico.
+
+---
+
+*Sistema de Facturación Pro 8*

@@ -6,13 +6,13 @@ sidebar_position: 6
 import DocsCard from '/src/components/global/DocsCard';
 import DocsCards from '/src/components/global/DocsCards';
 
-# Guía para Migrar a Pro7.1 o Superior
+# Guía para Migrar a Pro7.2 o Superior
 
 <head>
-  <title>Migración a Pro7.1</title>
+  <title>Migración a Pro7.2</title>
   <meta
     name="description"
-    content="Guía completa para migrar tu sistema desde Laravel 5.7 a Laravel 9.x con Pro7.1, incluyendo cambios en dependencias y proceso paso a paso."
+    content="Guía completa para migrar tu sistema desde Laravel 5.7 a Laravel 9.x con Pro7.2, incluyendo cambios en dependencias y proceso paso a paso."
   />
 </head>
 
@@ -28,7 +28,7 @@ import DocsCards from '/src/components/global/DocsCards';
 
   <DocsCard
     header="Script de Actualización"
-    href="#script-de-actualización"
+    href="#actualización-de-dependencias"
   >
     <p>Utiliza el script automático para migrar tu sistema de forma rápida y segura.</p>
   </DocsCard>
@@ -138,7 +138,15 @@ import DocsCards from '/src/components/global/DocsCards';
 Ingresar como usuario root, nos dirigimos a la carpeta del servicio y cambiamos a la rama de actualización con el siguiente comando: 
 
 ```bash
-git checkout -b v7.1 origin/v7.1
+git pull origin main
+```
+
+```bash
+git fetch all
+```
+
+```bash
+git checkout -b v7.2 origin/v7.2
 ```
 
 > **NOTA:** Si hay cambios en el storage que le impide el cambio de rama puede ejecutar: `git checkout -- storage/app/public/skins/*.css`
@@ -309,6 +317,12 @@ Dentro del contenedor fpm otorgamos permisos con el siguiente comando:
 
 ```bash
 chmod -R 777 vendor/mpdf
+```
+
+Y por ultimo ejecutar:
+
+```bash
+php artisan migrate && php artisan tenancy:migrate && php artisan config:cache && php artisan cache:clear && php artisan optimize:clear
 ```
 
 Finalmente el sistema está actualizado.

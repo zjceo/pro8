@@ -1,6 +1,6 @@
 ---
 title: Actualizar o Migrar el Sistema
-description: "Guía para actualizar el sistema Pro7 o migrar desde Pro6."
+description: "Guía para actualizar el sistema Pro 8 o migrar desde versiones anteriores."
 sidebar_position: 5
 ---
 
@@ -17,13 +17,28 @@ import DocsCards from '/src/components/global/DocsCards';
 
 ---
 
+:::danger IMPORTANTE - Migración desde Pro 7
+Si estás actualizando desde **Pro 7 (rama main)** a **Pro 8**, **primero debes seguir los pasos del manual de migración**:
+
+👉 [Manual de Upgrade Pro 7 a Pro 7.2](https://pro8.jczap.net/devs/instalacion/Upgrade-Docs)
+
+**Nota:** Puede actualizar directamente, pero debe tener en cuenta los cambios importantes en:
+- Dependencias del proyecto
+- Estructura de archivos y carpetas
+- Configuraciones del sistema
+
+Se recomienda **seguir el manual oficial** para evitar problemas durante la migración.
+:::
+
+---
+
 ## 📋 Pre Requisitos
 
 Antes de comenzar, asegúrate de tener:
 - Acceso SSH al servidor
 - Credenciales válidas de GitLab (usuario y token)
 - Permisos para ejecutar comandos Docker
-- Una suscripción activa para migrar de Pro6 a Pro7
+- Una suscripción activa para migrar desde versiones anteriores
 
 ---
 
@@ -34,14 +49,14 @@ Antes de comenzar, asegúrate de tener:
     header="Actualización Estándar"
     href="#3-actualización-estándar"
   >
-    <p>Para usuarios que ya tienen Pro7 y solo necesitan actualizar a la última versión.</p>
+    <p>Para usuarios que ya tienen Pro 8 y solo necesitan actualizar a la última versión.</p>
   </DocsCard>
 
   <DocsCard
-    header="Migración Pro6 → Pro7"
-    href="#4-migración-de-pro6-a-pro7"
+    header="Migración Pro 7 → Pro 8"
+    href="#4-migración-de-pro-7-a-pro-8"
   >
-    <p>Para clientes que desean migrar desde Pro6 a la nueva versión Pro7. Requiere suscripción activa.</p>
+    <p>Para clientes que desean migrar desde Pro 7 a la nueva versión Pro 8. Requiere suscripción activa.</p>
   </DocsCard>
 
   <DocsCard 
@@ -92,9 +107,9 @@ git stash
 git remote -v
 ```
 
-Si necesitas actualizar la URL:
+Necesitas actualizar la URL:
 ```bash
-git remote set-url origin https://git.buho.la/facturaloperu/facturador/pro7.git
+git remote set-url origin https://git.buho.la/facturaloperu/facturador/pro8.git
 ```
 
 ---
@@ -130,13 +145,27 @@ php artisan migrate && php artisan tenancy:migrate && php artisan config:cache &
 
 ---
 
-## 4. Migración de Pro6 a Pro7
+## 4. Migración de Pro 7 a Pro 8
 
 > **⚠️ Importante:** Debes tener una **suscripción activa** para realizar esta migración. Si tu suscripción no está vigente, contacta al área comercial antes de continuar.
 
+:::danger ATENCIÓN
+Antes de migrar de Pro 7 a Pro 8, **es obligatorio seguir el manual oficial de upgrade**:
+
+**👉 [Manual de Upgrade Pro 7 a Pro 8](https://pro8.jczap.net/devs/instalacion/Upgrade-Docs)**
+
+Este manual incluye:
+- Actualización de dependencias
+- Cambios en la estructura del proyecto
+- Configuraciones específicas necesarias
+- Scripts de migración de base de datos
+
+**No omitas este paso** o podrías experimentar errores críticos en el sistema.
+:::
+
 ### 4.1 Cambiar repositorio remoto
 ```bash
-git remote set-url origin https://git.buho.la/facturaloperu/facturador/pro7.git
+git remote set-url origin https://git.buho.la/facturaloperu/facturador/pro8.git
 ```
 
 ### 4.2 Verificar configuración
@@ -158,6 +187,7 @@ git stash apply
 - Confirma que todos los datos se migraron correctamente
 - Verifica el funcionamiento de las principales funcionalidades
 - Revisa y ajusta configuraciones según tus necesidades
+- Comprueba que las nuevas dependencias de Pro 8 estén instaladas
 
 ---
 
@@ -172,6 +202,13 @@ git add .                     # Agregar cambios resueltos
 git commit -m "Resolver conflictos de merge"
 ```
 
+### Errores de dependencias
+Si encuentras errores relacionados con dependencias después de actualizar:
+```bash
+composer install
+composer dump-autoload
+```
+
 ---
 
 ## Precauciones y Recomendaciones
@@ -180,11 +217,12 @@ git commit -m "Resolver conflictos de merge"
 - El comando `git reset --hard origin/main` eliminará **todos** los cambios locales no guardados
 - Siempre usar `git stash` para preservar trabajo no confirmado
 - Verificar permisos de archivos después de actualizaciones
+- Realizar backup completo antes de migrar de Pro 7 a Pro 8
 
 ### 🚫 Evitar
 - Actualizar en horarios de alta demanda
 - Saltar el proceso de respaldo
 - Ignorar mensajes de advertencia
+- Migrar de Pro 7 a Pro 8 sin seguir el manual oficial
 
 ---
-
