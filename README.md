@@ -1,41 +1,47 @@
-# Website
+# Manual de Usuario - Pro 8
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Este repositorio contiene la documentación oficial y el manual de usuario del **Sistema de Facturación Pro 8**. El sitio está construido con [Docusaurus](https://docusaurus.io/).
 
-## Installation
+## 🌐 Sitio En Vivo
 
-```bash
-yarn
-```
+Puedes acceder al manual desplegado en: [https://manual.pro8.uio.la](https://manual.pro8.uio.la)
 
-## Local Development
+---
 
-```bash
-yarn start
-```
+## 🛠️ Desarrollo Local
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Instalación
 
-## Build
+Se recomienda el uso de **npm** para la gestión de dependencias:
 
 ```bash
-yarn build
+npm install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+### Ejecutar servidor de desarrollo
 
 ```bash
-USE_SSH=true yarn deploy
+npm run start
 ```
 
-Not using SSH:
+Este comando inicia un servidor local en `http://localhost:3000`. La mayoría de los cambios se reflejan en tiempo real.
+
+---
+
+## 🏗️ Construcción y Despliegue
+
+### Build
+
+Genera el contenido estático en la carpeta `build/`:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Deploy (GitHub Pages)
+
+Para desplegar la versión más reciente en la rama `gh-pages`:
+
+```bash
+npm run deploy
+```
