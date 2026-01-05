@@ -53,7 +53,7 @@ Dependiendo de la versión del sistema Mozo que estés utilizando, el proceso de
 
 La versión web de Mozo.pe requiere tres elementos para iniciar sesión:
 
-1. **URL del Sistema**: Dirección del servidor donde está alojado tu sistema Pro 7
+1. **URL del Sistema**: Dirección del servidor donde está alojado tu sistema Pro 8
 2. **Correo Electrónico**: Usuario registrado en el sistema
 3. **Contraseña**: Contraseña asociada al correo
 
@@ -82,7 +82,7 @@ Guarda la URL de tu sistema en un lugar seguro. La necesitarás cada vez que ini
 ### Pasos para Iniciar Sesión
 
 1. **Accede a Mozo.pe**: Ve a [https://mozo.pe/app](https://mozo.pe/app)
-2. **Ingresa la URL**: Escribe la URL completa de tu sistema Pro 7
+2. **Ingresa la URL**: Escribe la URL completa de tu sistema Pro 8
 3. **Completa tus credenciales**: 
    - Correo electrónico
    - Contraseña
@@ -257,7 +257,7 @@ Depende de tu navegador y configuración. Algunos navegadores permiten autocompl
 **Posibles soluciones:**
 
 1. Verifica que la URL esté escrita correctamente (incluye https://)
-2. Asegúrate de que tu sistema Pro 7 esté activo y accesible
+2. Asegúrate de que tu sistema Pro 8 esté activo y accesible
 3. Confirma que tus credenciales sean correctas
 4. Limpia la caché de tu navegador
 5. Intenta desde otro navegador o dispositivo

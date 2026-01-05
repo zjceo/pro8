@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # API Documentation
 
-Bienvenido a la documentación de la API del Facturador Pro 7.
+Bienvenido a la documentación de la API del Facturador Pro 8.
 
 ## Introducción
 
@@ -49,3 +49,4 @@ Para usar la API, necesitarás obtener un token de autenticación. Contacta con 
 ## Soporte
 
 Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos a través de nuestro sistema de soporte.
+

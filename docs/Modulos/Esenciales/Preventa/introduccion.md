@@ -9,10 +9,10 @@ import DocsCards from '/src/components/global/DocsCards';
 # Módulo de Preventas - Gestión comercial previa a la facturación ⚡
 
 <head>
-  <title>Módulo de Preventas Pro 7</title>
+  <title>Módulo de Preventas Pro 8</title>
   <meta
     name="description"
-    content="Módulo de Preventas Pro 7: Herramienta completa para gestionar procesos comerciales previos a la emisión de comprobantes oficiales, con múltiples tipos de documentos comerciales."
+    content="Módulo de Preventas Pro 8: Herramienta completa para gestionar procesos comerciales previos a la emisión de comprobantes oficiales, con múltiples tipos de documentos comerciales."
   />
 </head>
 
@@ -120,7 +120,8 @@ Es fundamental tener en cuenta que los documentos generados en el Módulo de Pre
 
 Esto permite trabajar con total flexibilidad en la etapa previa a la venta, sin comprometer la precisión de la información contable y de inventario.
 
-## Integración con Pro 7 y Pro X
+## Integración con Pro 8 y Pro X
 
-El Módulo de Preventas está completamente integrado con los Sistemas de Facturación Pro 7 y Pro X, permitiendo una transición fluida desde la fase comercial hasta la facturación electrónica oficial cuando se concreta la venta.
+El Módulo de Preventas está completamente integrado con los Sistemas de Facturación Pro 8 y Pro X, permitiendo una transición fluida desde la fase comercial hasta la facturación electrónica oficial cuando se concreta la venta.
+
 
