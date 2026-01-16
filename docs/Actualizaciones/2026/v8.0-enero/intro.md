@@ -1,109 +1,157 @@
 ---
-slug: /v8.0
-sidebar_position: 1
+tittle: v8.0 (Enero)
 ---
 
-# v8.0 - Enero (Pro 8 & Mozo v4.0)
+# Pro 8 v1
 
-## Introducción
+## 🚀 Nuevas mejoras del sistema
 
-¡Comenzamos el 2026 con una renovación total! Presentamos **PRO 8** y **Mozo v4.0**, una actualización masiva que redefine la experiencia de facturación y gestión de restaurantes.
+### 🏪 Módulo Comercial y Ventas
 
-Esta versión trae consigo un **acceso 100% al código fuente**, optimizaciones críticas en el panel administrativo y de usuario, y un sistema para restaurantes completamente nuevo y gratuito con la adquisición de la preventa.
+#### Nuevo giro de negocio: Farmacia
 
----
+Configuración especializada para negocios farmacéuticos.
 
-## 🍽️ Mozo v4.0 (2026) - Sistema para Restaurantes
+![alt text](img/enero_1.png)
 
-Una suite completa para la gestión gastronómica, ahora más potente y flexible.
+#### Cuentas afectas e inafectas
 
-### 🎯 Gestión de Mesas y Pedidos
+Manejo correcto de operaciones con y sin impuestos.
 
-- **División de cuentas y precuentas**: Facilita el cobro a grupos grandes.
-- **Unir y separar mesas**: Flexibilidad total para la organización del salón.
-- **Mover pedidos entre mesas**: Corrección de errores o cambios de ubicación al instante.
-- **Nuevas visualizaciones**: Opciones avanzadas para ver el estado de las mesas.
+#### Separación del pago en efectivo
 
-### 🍔 Productos y Promociones
+El total en efectivo ahora se muestra separado de otros métodos de pago al contado, para un mejor control de caja.
 
-- **Packs, combos y promociones**: Herramientas potentes para aumentar el ticket promedio.
-- **Modificadores de productos**: Personalización detallada de los pedidos (sin cebolla, extra queso, etc.).
-- **Módulo de recetas**: Estandarización de platos y control de calidad.
+#### Campo teléfono en cotizaciones
 
-### 🏭 Control y Gestión
+Facilita el contacto y seguimiento de clientes.
 
-- **Control de insumos y costos**: Gestión detallada de costos y preparación.
-- **Stock en tiempo real**: Control de inventario de productos preciso.
-- **Ambientes ilimitados**: Crea tantos salones o áreas como necesites.
-- **Zonas de preparación ilimitadas**: Barra, cocina fría, cocina caliente, parrilla, etc.
-- **Soporte para impresoras por zonas**: Comandas dirigidas automáticamente al área correcta.
+![alt text](img/enero_2.png)
 
-### 🛵 Delivery y Servicios
+#### Agente de retención y placas por cliente
 
-- **Funciones avanzadas de delivery**: Gestión optimizada para repartos.
-- **Recojo en restaurante**: Flujo de trabajo específico para "Pick-up".
+Mejora el control tributario y la identificación de clientes.
+
+#### Integración Concar (versión simple)
+
+Exportación contable simplificada para integración con Concar.
 
 ---
 
-## ⚡ Sistema de Facturación PRO 8
+### 📦 Módulo Almacén e Insumos
 
-Una evolución robusta con acceso total al código y mejoras significativas en rendimiento y usabilidad.
+#### Nuevo filtro en el módulo de Almacén
 
-### 🔧 Panel Administrador
+Búsquedas más rápidas y control más eficiente.
 
-- **Acceso Maestro optimizado**: Gestión centralizada más rápida y eficiente.
-- **Optimización del login**: Acceso más seguro y veloz al sistema.
+#### Nuevo módulo de insumos (Restaurante)
 
-### 👤 Panel Usuario
+![alt text](img/enero_3.png)
 
-#### 📊 Contabilidad y Finanzas
+- Gestión de insumos
+- Registro de compras
+- Aumento automático de stock
+- Relación directa con platos del restaurante
 
-- **Reporte Concar Simple integrado**: Exportación directa para contabilidad.
-- **Gestión de cuentas**: Control preciso de cuentas afectas e inafectas.
-- **Módulo de Pagos optimizado**: Mejor experiencia en el registro y seguimiento de pagos.
+#### Control de stock por insumos
 
-#### 🛡️ Seguridad y Validaciones
-
-- **Validación de certificado digital**: Verificación automática del estado del certificado.
-- **Validación Demo a Producción**: Chequeo previo para evitar errores al salir en vivo.
-
-#### 🎨 Personalización y Diseño
-
-- **Nuevas Plantillas personalizadas**: Más opciones para tus documentos.
-- **Personalización de colores de tienda**: Adapta la interfaz a tu marca.
-- **Nuevo Editor de etiquetas**: Herramienta integrada para diseñar etiquetas fácilmente.
-
-#### 📦 Productos y Precios
-
-- **Creación rápida de productos**: Formularios optimizados para alta velocidad.
-- **Edición avanzada de Lista de Precios**: Gestión masiva y detallada.
-- **Reporte de productos**: Ahora disponible en bandeja de descargas para grandes volúmenes.
-- **Listado de promociones**: Visualización clara de las ofertas activas.
-
-#### 🚗 Funcionalidades POS
-
-- **Registro de placas**: Captura de placas de vehículos directamente en el POS.
-
-#### ⚙️ Sistema
-
-- **Tareas programadas organizadas**: Renombradas y ordenadas para fácil administración.
+El stock del restaurante se descuenta según los insumos consumidos en cada plato.
 
 ---
 
-## 🎁 Beneficios de Preventa
+### 🍽️ Módulo Restaurante
 
-> **Oferta limitada hasta el 31/12/2025**
+#### Lectura y control del mozo
 
-- **Hasta 50% de descuento** exclusivo.
-- **Mozo v4.0 GRATIS**: Acceso al código compilado del sistema de restaurantes.
-- **Acceso 100% al Código Fuente de PRO 8**.
-- **Inicio de actividades**: 05/01/2026 (Pagas hoy, activas en enero sin perder días de suscripción).
-- **Soporte activo**: Empieza el año con respaldo total.
+Mejora en la asignación y seguimiento de pedidos.
+
+#### Configuración para que el mozo pueda cerrar mesas
+
+Funcionalidad activable según permisos.
+
+#### Modificadores de productos
+
+Gestión y asignación de adicionales, opciones y personalizaciones por producto.
+
+![alt text](img/enero_4.png)
+
+#### Unir mesas y activar/desactivar mesas
+
+Mayor flexibilidad en la atención.
+
+#### Sincronización de mesas en tiempo real
+
+Cambios visibles automáticamente en todos los dispositivos.
+
+#### Endpoint de estados de órdenes (comandas) por mesa
+
+Mejora la comunicación entre salón y cocina.
 
 ---
 
-## 📞 ¿Cómo actualizar?
+### 🔥 Módulo Cocina e Impresión
 
-Ponte en contacto con nuestro equipo de soporte para aprovechar la preventa o gestionar tu actualización a **PRO 8**.
+#### Configuración de áreas de preparación e impresión
 
-¡Lleva tu negocio al siguiente nivel este 2026! 🚀
+Permite asignar insumos y productos a distintas áreas (cocina, bar, parrilla, etc.).
+
+---
+
+### 🚚 Módulo Delivery y Para Llevar
+
+#### Ambientes fijos sin mesas
+
+Flujos simplificados para pedidos sin atención en salón.
+
+#### Estado de pago para delivery y para llevar
+
+Control claro de pedidos pagados y pendientes.
+
+#### Eliminación automática de mesas en estos ambientes
+
+Evita inconsistencias operativas.
+
+---
+
+### 🏢 Módulo Ambientes
+
+#### Gestión dinámica de ambientes
+
+- Creación de ambientes ilimitados, ya no limitados a 4 fijos
+- Separación clara entre salón, delivery y para llevar
+
+---
+
+### 🧩 Módulo Productos y Tienda
+
+#### Imagen "no disponible" para productos
+
+Visualización correcta cuando un producto no tiene imagen, tanto en tienda como en restaurante.
+
+#### Nuevas configuraciones para tienda y restaurante
+
+Mayor control visual y operativo según el canal.
+
+---
+
+### 🎨 Interfaz y Experiencia de Usuario (UI/UX)
+
+#### Mejora en estilos de botones "Agregar nuevo ítem"
+
+Interfaz más clara y moderna.
+
+#### Mejoras generales para vista móvil
+
+Experiencia optimizada en celulares y tablets.
+
+#### Mejoras en la paginación
+
+Navegación más clara y fluida entre registros.
+
+---
+
+### 🔐 Seguridad y Acceso
+
+#### Corrección de rutas en el proceso de login
+
+Acceso más estable y confiable al sistema.

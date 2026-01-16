@@ -214,6 +214,18 @@ const config: Config = {
     require.resolve("docusaurus-theme-openapi-docs"),
     require.resolve("@docusaurus/theme-live-codeblock"),
     //require.resolve("@docusaurus/theme-search-algolia"),
+
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+        docsRouteBasePath: '/', // Asegura que el buscador indexe correctamente
+      }),
+    ]
+
   ],
 
   themeConfig: {
@@ -222,13 +234,13 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    algolia: {
+    /*algolia: {
       // The application ID provided by Algolia
       appId: "I0B1SS64CU",
       // Public API key
       apiKey: "6a3186a95fda093e0fa197b971e74924",
       indexName: "Pro 8",
-    },
+    },*/
     navbar: {
       title: "Pro 8",
       logo: {
@@ -236,13 +248,13 @@ const config: Config = {
         src: "img/pro8-logo.svg",
       },
       items: [
-        {
+        /*{
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "Navegación",
           className: "mobile-sidebar-toggle",
-        },
+        },*/
         /*{
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
